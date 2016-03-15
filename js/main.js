@@ -1,14 +1,14 @@
-$(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
+jQuery(document).ready(function(){
+   
+    jQuery('a[href^="#"]').click(function(e) {
 
-	    var target = this.hash;
-	    var $target = $(target);
+        jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
 
-	    $('html, body').stop().animate({
-	        scrollTop: $target.offset().top
-	    }, 900, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
+        return false;
+
+        e.preventDefault();
+
+    });
+
 });
+
