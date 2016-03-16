@@ -75,12 +75,21 @@ a {
     }
 /*------------*/
 
+
+
+
+
+
+
+
+
+
 .wrapper {
      position: relative;
         top: $div-top;
+        padding: 0;
         margin: 0 auto;
         width: 45%;
-        height: 100vh;
         h2 {
           text-align: center;
           font-size: 42px;
@@ -109,7 +118,7 @@ header, nav {
     color: #fff;
     position: relative;
     font-size: 34px;
-    font-weight: 400;
+    font-weight: 600;
     top: 60px;
     left: 67px;
     }
@@ -128,13 +137,17 @@ header, nav {
         li{
             visibility: visible;
             font-size: 20px;
-            font-weight: 300;
+            font-weight: 400;
+            a {
+                &:hover {
+                    color: #eaeaea;
+                }
+            }
         }
     }
 }
 
-
-
+    
 #col-intro {
     height: 100vh;
     background-color: $ceramic;
@@ -148,16 +161,18 @@ header, nav {
         width: 40%;
         h1 {
         text-align: center;
-        font-size: 36px;
+        font-size: 40px;
         line-height: 120%;
+            font-weight: 400;
     }
         h3 {
-            margin-top: 40px;
-            font-size: 25px;
+            font-style: italic;
+            margin-top: 80px;
+            font-size: 30px;
             line-height: 110%;
             letter-spacing: 1px;
             text-align: center;
-            font-weight: 400;
+            font-weight: 300;
         }
     }
     
@@ -192,32 +207,42 @@ header, nav {
 }
 
 #col-cont {
-    height: 75vh;
+    height: 85vh;
     background-color: $midnight;
+    text-align: center;
+    h3 {
+           font-size: 24px;
+    }
+ 
 }
 
 #col-footer {
-    height: 25vh;
+    height: 15vh;
     background-color: #2a3137;
     #footer-wrapper-1 {
         color: darkgray;
         display: inline-block;
         position: relative;
-        bottom: -17vh;
+        bottom: -8vh;
         float: left;
-        width: 40%;
+        width: 30%;
         text-align: center;
     }
     #footer-wrapper-2 {
-        color: darkgray;
+        color: $slate;
         display: inline-block;
         position: relative;
-        bottom: -17vh;
+        bottom: -7vh;
         float: right;
         width: 40%;
         text-align: center;
+        a {
+            &:hover {
+                color: $slate;
+            }
         i {
-            margin: 0px 25px;
+            margin: 0px 25px 0px 0px;
+        }
         }
     }
 }

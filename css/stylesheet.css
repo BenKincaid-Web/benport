@@ -66,9 +66,9 @@ a {
 .wrapper {
   position: relative;
   top: 12vh;
+  padding: 0;
   margin: 0 auto;
-  width: 45%;
-  height: 100vh; }
+  width: 45%; }
   .wrapper h2 {
     text-align: center;
     font-size: 42px;
@@ -92,7 +92,7 @@ header, nav {
   color: #fff;
   position: relative;
   font-size: 34px;
-  font-weight: 400;
+  font-weight: 600;
   top: 60px;
   left: 67px; }
 
@@ -109,7 +109,9 @@ header, nav {
     #header-bar ul li {
       visibility: visible;
       font-size: 20px;
-      font-weight: 300; }
+      font-weight: 400; }
+      #header-bar ul li a:hover {
+        color: #eaeaea; }
 
 #col-intro {
   height: 100vh;
@@ -123,15 +125,17 @@ header, nav {
     width: 40%; }
     #col-intro #intro-wrapper h1 {
       text-align: center;
-      font-size: 36px;
-      line-height: 120%; }
+      font-size: 40px;
+      line-height: 120%;
+      font-weight: 400; }
     #col-intro #intro-wrapper h3 {
-      margin-top: 40px;
-      font-size: 25px;
+      font-style: italic;
+      margin-top: 80px;
+      font-size: 30px;
       line-height: 110%;
       letter-spacing: 1px;
       text-align: center;
-      font-weight: 400; }
+      font-weight: 300; }
 
 #col-about {
   height: 100vh;
@@ -150,29 +154,34 @@ header, nav {
   background-color: #626d71; }
 
 #col-cont {
-  height: 75vh;
-  background-color: #323e48; }
+  height: 85vh;
+  background-color: #323e48;
+  text-align: center; }
+  #col-cont h3 {
+    font-size: 24px; }
 
 #col-footer {
-  height: 25vh;
+  height: 15vh;
   background-color: #2a3137; }
   #col-footer #footer-wrapper-1 {
     color: darkgray;
     display: inline-block;
     position: relative;
-    bottom: -17vh;
+    bottom: -8vh;
     float: left;
-    width: 40%;
+    width: 30%;
     text-align: center; }
   #col-footer #footer-wrapper-2 {
-    color: darkgray;
+    color: #626d71;
     display: inline-block;
     position: relative;
-    bottom: -17vh;
+    bottom: -7vh;
     float: right;
     width: 40%;
     text-align: center; }
-    #col-footer #footer-wrapper-2 i {
-      margin: 0px 25px; }
+    #col-footer #footer-wrapper-2 a:hover {
+      color: #626d71; }
+    #col-footer #footer-wrapper-2 a i {
+      margin: 0px 25px 0px 0px; }
 
 /*# sourceMappingURL=stylesheet.css.map */
