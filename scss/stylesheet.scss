@@ -5,10 +5,19 @@ $slate: #626d71;
 $ceramic: #cdcdc0;
 $latte: #ddbc95;
 $coffee: #b38867;
+$midnight: #323e48;
 
+$div-top: 12vh;
 
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
 
-
+.cf:after {
+    clear: both;
+}
 
 body, input, textarea {
     background-color: $slate;
@@ -21,14 +30,6 @@ body, input, textarea {
   font-weight:400;
   z-index: 1;}
 
-.grid {
-  width: 100%;
-  margin: 0px;
-  overflow: hidden; }
-  #grid:after {
-    content: "";
-    display: table;
-    clear: both; }
 
 [class*='col-'] {
   float: left;
@@ -66,7 +67,27 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
+#line {
+  border :1.5px solid #fff;
+  width: 50%;
+  opacity: .3;
+    }
 /*------------*/
+
+.wrapper {
+     position: relative;
+        top: $div-top;
+        margin: 0 auto;
+        width: 45%;
+        height: 100vh;
+        h2 {
+          text-align: center;
+          font-size: 42px;
+          line-height: 100%;
+    }
+}
+    
 
 #grid {
   width: 100%;
@@ -87,15 +108,10 @@ header, nav {
 #col-header {
     color: #fff;
     position: relative;
-    font-size: 38px;
+    font-size: 34px;
     font-weight: 400;
     top: 60px;
     left: 67px;
-        h2{
-            a{
-               pointer-events: all; 
-            }
-        }
     }
 
 
@@ -124,7 +140,7 @@ header, nav {
     background-color: $ceramic;
     margin: 0 auto;
     width: 100%;
-    #intro-text {
+    #intro-wrapper {
         position: relative;
         top: 25vh;
 
@@ -132,7 +148,7 @@ header, nav {
         width: 40%;
         h1 {
         text-align: center;
-        font-size: 40px;
+        font-size: 36px;
         line-height: 120%;
     }
         h3 {
@@ -152,16 +168,58 @@ header, nav {
 #col-about {
     height: 100vh;
     background-color: $latte;
+      h2{
+        
+    }
+    h3{
+        text-indent: 30px;
+        &:first-of-type {
+            margin-top: 60px;
+        }
+    }
 }
 
 #col-port {
     height: 100vh;
     background-color: $coffee;
+   
 }
 
 #col-resu {
     height: 100vh;
     background-color: $slate;
+    
+}
+
+#col-cont {
+    height: 75vh;
+    background-color: $midnight;
+}
+
+#col-footer {
+    height: 25vh;
+    background-color: #2a3137;
+    #footer-wrapper-1 {
+        color: darkgray;
+        display: inline-block;
+        position: relative;
+        bottom: -17vh;
+        float: left;
+        width: 40%;
+        text-align: center;
+    }
+    #footer-wrapper-2 {
+        color: darkgray;
+        display: inline-block;
+        position: relative;
+        bottom: -17vh;
+        float: right;
+        width: 40%;
+        text-align: center;
+        i {
+            margin: 0px 25px;
+        }
+    }
 }
 
 

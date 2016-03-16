@@ -1,4 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
 body, input, textarea {
   background-color: #626d71;
   padding: 0;
@@ -9,16 +19,6 @@ body, input, textarea {
   color: #fff;
   font-weight: 400;
   z-index: 1; }
-
-.grid {
-  width: 100%;
-  margin: 0px;
-  overflow: hidden; }
-
-#grid:after {
-  content: "";
-  display: table;
-  clear: both; }
 
 [class*='col-'] {
   float: left;
@@ -57,7 +57,23 @@ a {
   text-decoration: none;
   color: #fff; }
 
+#line {
+  border: 1.5px solid #fff;
+  width: 50%;
+  opacity: .3; }
+
 /*------------*/
+.wrapper {
+  position: relative;
+  top: 12vh;
+  margin: 0 auto;
+  width: 45%;
+  height: 100vh; }
+  .wrapper h2 {
+    text-align: center;
+    font-size: 42px;
+    line-height: 100%; }
+
 #grid {
   width: 100%;
   width: 100%;
@@ -75,12 +91,10 @@ header, nav {
 #col-header {
   color: #fff;
   position: relative;
-  font-size: 38px;
+  font-size: 34px;
   font-weight: 400;
-  top: 50px;
+  top: 60px;
   left: 67px; }
-  #col-header h2 a {
-    pointer-events: all; }
 
 #header-bar {
   display: inline-block;
@@ -102,16 +116,16 @@ header, nav {
   background-color: #cdcdc0;
   margin: 0 auto;
   width: 100%; }
-  #col-intro #intro-text {
+  #col-intro #intro-wrapper {
     position: relative;
     top: 25vh;
     margin: 0 auto;
     width: 40%; }
-    #col-intro #intro-text h1 {
+    #col-intro #intro-wrapper h1 {
       text-align: center;
-      font-size: 40px;
+      font-size: 36px;
       line-height: 120%; }
-    #col-intro #intro-text h3 {
+    #col-intro #intro-wrapper h3 {
       margin-top: 40px;
       font-size: 25px;
       line-height: 110%;
@@ -122,6 +136,10 @@ header, nav {
 #col-about {
   height: 100vh;
   background-color: #ddbc95; }
+  #col-about h3 {
+    text-indent: 30px; }
+    #col-about h3:first-of-type {
+      margin-top: 60px; }
 
 #col-port {
   height: 100vh;
@@ -130,5 +148,31 @@ header, nav {
 #col-resu {
   height: 100vh;
   background-color: #626d71; }
+
+#col-cont {
+  height: 75vh;
+  background-color: #323e48; }
+
+#col-footer {
+  height: 25vh;
+  background-color: #2a3137; }
+  #col-footer #footer-wrapper-1 {
+    color: darkgray;
+    display: inline-block;
+    position: relative;
+    bottom: -17vh;
+    float: left;
+    width: 40%;
+    text-align: center; }
+  #col-footer #footer-wrapper-2 {
+    color: darkgray;
+    display: inline-block;
+    position: relative;
+    bottom: -17vh;
+    float: right;
+    width: 40%;
+    text-align: center; }
+    #col-footer #footer-wrapper-2 i {
+      margin: 0px 25px; }
 
 /*# sourceMappingURL=stylesheet.css.map */
